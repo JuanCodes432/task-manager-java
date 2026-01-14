@@ -1,11 +1,11 @@
 package model;
 
-public class clsTarea {
+public class Tarea {
     private String attDescripcion;
     private boolean attCompletada;
     private int attPrioridad;
 
-    public clsTarea(String prmDescripcion, boolean prmCompletada, int prmPrioridad){
+    public Tarea(String prmDescripcion, boolean prmCompletada, int prmPrioridad){
         attDescripcion = prmDescripcion;
         attCompletada = prmCompletada;
         attPrioridad = prmPrioridad;
