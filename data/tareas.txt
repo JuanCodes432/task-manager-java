@@ -1,0 +1,4 @@
+Estudiar Java;true;1
+Subir proyecto a GitHub;false;2
+Estudiar Java;false;1
+Subir proyecto a GitHub;false;2

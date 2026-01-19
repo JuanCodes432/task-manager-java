@@ -4,33 +4,36 @@ import model.Tarea;
 import java.util.ArrayList;
 
 public class GestorTareas {
-    private ArrayList<Tarea> attTareas;
+    private ArrayList<Tarea> tareas;
 
-    public GestorTareas(){
-        attTareas = new ArrayList<>();
+    public GestorTareas(ArrayList<Tarea> tareas){
+        this.tareas = tareas;
     }
 
     //Se encarga de agregar tareas
     public void  agregarTarea(String prmDescripcion, int prmPrioridad){
         Tarea nuevaTarea = new Tarea(prmDescripcion, false, prmPrioridad);
-
         //Añadimos la tarea al array
-        attTareas.add(nuevaTarea);
+        tareas.add(nuevaTarea);
     }
 
     public void listarTareas(){
-        for (int i = 0; i < attTareas.size(); i++) {
-            System.out.println(i + ". " + attTareas.get(i));
+        for (int i = 0; i < tareas.size(); i++) {
+            System.out.println(i + ". " + tareas.get(i));
         }
     }
 
     //Marca tarea como completada
     public void completarTarea(int index){
-        if(index >= 0 && index < attTareas.size()){
+        if(index >= 0 && index < tareas.size()){
             System.out.println("Tarea completada");
-            attTareas.get(index).setCompletada(true);
+            tareas.get(index-1).setCompletada(true);
         }else{
             System.out.println("Indice no valido");
         }
+    }
+
+    public ArrayList<Tarea> getTareas(){
+        return tareas;
     }
 }

@@ -15,11 +15,11 @@ public class Tarea {
         return attDescripcion;
     }
 
-    public boolean getAttCompletada(){
+    public boolean getCompletada(){
         return attCompletada;
     }
 
-    public int attPrioridad(){
+    public int getPrioridad(){
         return attPrioridad;
     }
 
@@ -34,4 +34,13 @@ public class Tarea {
     public void setPrioridad(int prmPrioridad){
         attPrioridad = prmPrioridad;
     }
+
+    @Override
+    public String toString() {
+        return "Descripción: " + attDescripcion +
+                " | Completada: " + attCompletada +
+                " | Prioridad: " + attPrioridad;
+    }
+
+
 }
