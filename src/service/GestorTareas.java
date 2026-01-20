@@ -45,4 +45,13 @@ public class GestorTareas {
     public void setTareas(ArrayList<Tarea> tareas){
         this.tareas = tareas;
     }
+
+    public void eliminarTareas(int index){
+        if(index > 0 && index <= tareas.size()){
+            tareas.remove(index-1);
+            System.out.println("Tarea eliminada con exito");
+        }else{
+            System.out.println("Indice invalido");
+        }
+    }
 }

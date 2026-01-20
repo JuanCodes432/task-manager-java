@@ -1,3 +1,1 @@
-Aprender java;true;10
-Ver videos en ingles;true;20
 Aprender a manejar;true;20

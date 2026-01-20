@@ -12,7 +12,8 @@ public class Main {
         System.out.println("1. Agregar Tarea");
         System.out.println("2. Listar Tareas");
         System.out.println("3. Completar Tarea");
-        System.out.println("4.Salir");
+        System.out.println("4. Eliminar tarea");
+        System.out.println("5.Salir");
         System.out.print("Ingrese una opcion: ");
         int opcion = entrada.nextInt();
         System.out.println("");
@@ -53,11 +54,21 @@ public class Main {
                     break;
 
                 case 4:
+                    System.out.println("Eliminar tareas");
+                    if(gestor.getTareas().isEmpty()){
+                        System.out.println("No hay tareas disponibles");
+                        break;
+                    }
+                    gestor.listarTareas();
+                    System.out.println("Ingrese el indice a eliminar: ");
+                    int exit = entrada.nextInt();
+                    gestor.eliminarTareas(exit);
+                    break;
+                case 5:
                     System.out.println("Contenido guardado con exito");
                     ArchivoUtil.guardarTareas(gestor.getTareas());
                     salir = true;
                     break;
-
                 default:
                     System.out.println("Opción no válida, intente de nuevo.");
                     break;
