@@ -1,4 +1,3 @@
-Estudiar Java;true;1
-Subir proyecto a GitHub;false;2
-Estudiar Java;false;1
-Subir proyecto a GitHub;false;2
+Aprender java;true;10
+Ver videos en ingles;true;20
+Aprender a manejar;true;20
