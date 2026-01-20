@@ -1,1 +1,1 @@
-Aprender a manejar;true;20
+Hacer ejercicio diario;false;100

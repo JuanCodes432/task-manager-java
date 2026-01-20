@@ -36,6 +36,7 @@ public class Main {
                     String descripcion = entrada.nextLine();
                     System.out.println("");
                     gestor.agregarTarea(descripcion,prioridad);
+                    ArchivoUtil.guardarTareas(gestor.getTareas());
                     break;
 
                 case 2:
@@ -50,6 +51,7 @@ public class Main {
 
                     }else {
                         gestor.completarTarea(index);
+                        ArchivoUtil.guardarTareas(gestor.getTareas());
                     }
                     break;
 
@@ -63,10 +65,10 @@ public class Main {
                     System.out.println("Ingrese el indice a eliminar: ");
                     int exit = entrada.nextInt();
                     gestor.eliminarTareas(exit);
+                    ArchivoUtil.guardarTareas(gestor.getTareas());
                     break;
                 case 5:
                     System.out.println("Contenido guardado con exito");
-                    ArchivoUtil.guardarTareas(gestor.getTareas());
                     salir = true;
                     break;
                 default:
